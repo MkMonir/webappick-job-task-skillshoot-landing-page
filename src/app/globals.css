@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply px-11 py-3 bg-primary text-white inline-flex items-center justify-center gap-4 text-center font-bold;
+  }
+
+  .title {
+    @apply text-[#2C2C2C] font-semibold text-4xl leading-[54px];
+  }
+
+  .title span {
+    @apply text-secondary;
+  }
+
+  .description {
+    @apply text-gray leading-[35px];
+  }
+}
+
+.animation-pulse {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(255, 255, 255);
+  }
+
+  70% {
+    box-shadow: 0 0 0 40px rgba(229, 62, 62, 0);
+  }
+}
