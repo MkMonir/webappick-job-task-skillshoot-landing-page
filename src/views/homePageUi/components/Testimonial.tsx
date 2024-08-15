@@ -11,7 +11,7 @@ const Testimonial = () => {
     const testimonialSwiperRef = useRef<any>();
 
     return (
-        <section id="testimonial" className='py-[87px] bg-[#F8F8F8]'>
+        <section id="testimonial" className='sm:py-[87px] py-[62px] bg-[#F8F8F8]'>
             <div className="container">
                 {/* TITLE */}
                 <div className="text-center mb-[50px] max-w-2xl mx-auto">
@@ -24,7 +24,7 @@ const Testimonial = () => {
                 <div className="relative">
                     <Swiper
                         speed={1000}
-                        slidesPerView={3}
+                        slidesPerView={1}
                         spaceBetween={20}
                         keyboard={{
                             enabled: true,
@@ -38,6 +38,14 @@ const Testimonial = () => {
                         loop={true}
                         onBeforeInit={(swiper) => {
                             testimonialSwiperRef.current = swiper;
+                        }}
+                        breakpoints={{
+                            576: {
+                                slidesPerView: 2,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                            },
                         }}
                         modules={[Autoplay, Keyboard]}
                         className="mySwiper grid grid-cols-3 gap-5"
@@ -58,7 +66,7 @@ const Testimonial = () => {
                         )}
                     </Swiper>
 
-                    <div className='flex justify-center items-center gap-5 mt-[50px]'>
+                    <div className='flex justify-center items-center gap-5 sm:mt-[50px] mt-5'>
                         <button
                             className="z-[200] w-[54px] h-[54px] bg-white grid place-items-center text-2xl text-black rounded-full border-[8px] border-solid border-[#F5F5F5] transition-all duration-500 hover:bg-secondary hover:text-white active:scale-95"
                             onClick={() => testimonialSwiperRef.current?.slidePrev()}

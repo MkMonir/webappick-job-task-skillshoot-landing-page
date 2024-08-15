@@ -2,6 +2,7 @@ import About from "./components/About"
 import Clients from "./components/Clients"
 import Courses from "./components/Courses"
 import Features from "./components/Features"
+import Footer from "../../components/appbars/footer/Footer"
 import Hero from "./components/Hero"
 import JoinSection from "./components/JoinSection"
 import Pricing from "./components/Pricing"
@@ -20,6 +21,7 @@ const HomePageUI = () => {
             <JoinSection />
             <Pricing />
             <Testimonial />
+            <Footer />
         </div>
     )
 }

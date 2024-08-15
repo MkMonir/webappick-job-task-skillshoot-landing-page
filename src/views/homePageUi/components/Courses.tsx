@@ -13,10 +13,10 @@ const Courses = () => {
     const courseSwiperRef = useRef<any>();
 
     return (
-        <section id="courses" className="bg-primary py-[75px]">
-            <div className="container relative">
-                <Image src="/assets/images/banner-svg-two.svg" alt="Banner Shapes" className="absolute top-14 left-28" width={50} height={50} />
-                <Image src="/assets/images/banner-svg-five.svg" alt="Banner Shapes" className="absolute top-8 right-28" width={25} height={25} />
+        <section id="courses" className="bg-primary am:py-[75px] py-[81px] relative">
+            <div className="sm:container relative">
+                <Image src="/assets/images/banner-svg-two.svg" alt="Banner Shapes" className="absolute sm:top-14 sm:left-28 -top-10 left-5" width={50} height={50} />
+                <Image src="/assets/images/banner-svg-five.svg" alt="Banner Shapes" className="absolute sm:top-8 sm:right-28 -top-3 right-5" width={25} height={25} />
 
                 {/* TITLE */}
                 <div className="text-center mb-[50px] max-w-2xl mx-auto">
@@ -29,7 +29,7 @@ const Courses = () => {
                 <div className="relative">
                     <Swiper
                         speed={1000}
-                        slidesPerView={3}
+                        slidesPerView={1.3}
                         spaceBetween={20}
                         keyboard={{
                             enabled: true,
@@ -39,8 +39,17 @@ const Courses = () => {
                             disableOnInteraction: false,
                         }}
                         loop={true}
+                        centeredSlides={true}
                         onBeforeInit={(swiper) => {
                             courseSwiperRef.current = swiper;
+                        }}
+                        breakpoints={{
+                            576: {
+                                slidesPerView: 2,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                            },
                         }}
                         modules={[Autoplay, Keyboard]}
                         className="mySwiper grid grid-cols-3 gap-5"
@@ -56,10 +65,10 @@ const Courses = () => {
                                     <Image src="/assets/images/course-img-one.jpg" alt="Course Image" width={420} height={250} className="w-full rounded-t-2xl" />
                                 </div>
 
-                                <div className="p-7 pb-5">
-                                    <h4 className="text-2xl leading-[36px] text-[#2C2C2C] font-semibold">Basics of learning team management</h4>
+                                <div className="sm:p-7 p-[18px] sm:pb-5 pb-3">
+                                    <h4 className="sm:text-2xl text-sm sm:leading-[36px] leading-[21px] text-[#2C2C2C] font-semibold">Basics of learning team management</h4>
 
-                                    <div className="flex gap-20 items-center mt-5 mb-10">
+                                    <div className="flex gap-5 justify-between items-center mt-5 mb-10">
                                         <div className="flex items-center gap-3">
                                             <Image src="/assets/images/author-one.png" alt="User" width={45} height={45} />
                                             <div>
@@ -89,13 +98,13 @@ const Courses = () => {
                         )}
                     </Swiper>
                     <button
-                        className="absolute -left-7 top-1/2 -translate-y-1/2 z-[200] w-14 h-14 bg-white grid place-items-center text-2xl text-black border-[8px] border-solid border-[#F5F5F5] rounded-full shadow transition-all duration-500 hover:bg-primary hover:text-white active:scale-95"
+                        className="absolute sm:-left-7 left-5 top-1/2 -translate-y-1/2 z-[200] w-14 h-14 bg-white grid place-items-center text-2xl text-black border-[8px] border-solid border-[#F5F5F5] rounded-full shadow transition-all duration-500 hover:bg-primary hover:text-white active:scale-95"
                         onClick={() => courseSwiperRef.current?.slidePrev()}
                     >
                         <GoArrowLeft />
                     </button>
                     <button
-                        className="absolute -right-7 top-1/2 -translate-y-1/2 z-[200] w-14 h-14 bg-white grid place-items-center text-2xl text-black border-[8px] border-solid border-[#F5F5F5] rounded-full shadow transition-all duration-500 hover:bg-primary hover:text-white active:scale-95"
+                        className="absolute sm:-right-7 right-5 top-1/2 -translate-y-1/2 z-[200] w-14 h-14 bg-white grid place-items-center text-2xl text-black border-[8px] border-solid border-[#F5F5F5] rounded-full shadow transition-all duration-500 hover:bg-primary hover:text-white active:scale-95"
                         onClick={() => courseSwiperRef.current?.slideNext()}
                     >
                         <GoArrowRight />

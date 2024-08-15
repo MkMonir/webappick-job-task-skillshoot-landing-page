@@ -3,12 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-  .btn {
-    @apply px-11 py-3 bg-primary text-white inline-flex items-center justify-center gap-4 text-center font-bold;
-  }
-
   .title {
-    @apply text-[#2C2C2C] font-semibold text-4xl leading-[54px];
+    @apply text-[#2C2C2C] font-semibold sm:text-4xl sm:leading-[54px] text-lg leading-[27px];
   }
 
   .title span {
@@ -16,7 +12,7 @@
   }
 
   .description {
-    @apply text-gray leading-[35px];
+    @apply text-gray text-xs sm:text-base sm:leading-[35px] leading-[30px];
   }
 }
 

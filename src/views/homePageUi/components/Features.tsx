@@ -2,14 +2,14 @@ import Image from "next/image"
 
 const Features = () => {
     return (
-        <section id="features" className="py-[100px]">
+        <section id="features" className="sm:py-[100px] py-[50px]">
             <div className="container">
-                <div className="grid grid-cols-2">
-                    <div className="w-[70%]">
+                <div className="grid lg:grid-cols-2 gap-[50px] lg:gap-0">
+                    <div className="lg:w-[70%] flex flex-col items-center justify-center text-center md:text-left md:justify-start md:items-start">
                         <h2 className="title">Why do we <span>exist?</span></h2>
                         <p className="description">Because we know that many people or companies have the same problem when it comes to how difficult it is to improve their skills</p>
 
-                        <div className="flex items-center gap-3 mt-[30px]">
+                        <div className="flex text-left items-center gap-3 mt-[30px]">
                             <Image src="/assets/images/user.png" alt="User" width={70} height={70} />
                             <div>
                                 <p className="text-lg font-semibold tex-[#2C2C2C] leading-[35px]">Jerony Pulquosta</p>
@@ -32,9 +32,9 @@ const Features = () => {
                     </div>
 
                     <div>
-                        <ul className="grid grid-cols-2 gap-14">
+                        <ul className="grid md:grid-cols-2 md:gap-14 gap-[30px]">
                             {featureData?.map((feature, i) => (
-                                <li key={i}>
+                                <li key={i} className="flex flex-col items-center justify-center text-center md:text-left md:justify-start md:items-start">
                                     <Image src={`/assets/images/${feature.icon}.svg`} alt="Feature Icon" width={50} height={50} />
                                     <h5 className="text-2xl font-semibold leading-[36px] text-[#245D51] mt-[30px] mb-2.5 line-clamp-1">{feature.title}</h5>
                                     <p className="description">{feature.description}</p>

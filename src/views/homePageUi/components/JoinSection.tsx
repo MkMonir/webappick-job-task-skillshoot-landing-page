@@ -5,16 +5,16 @@ const JoinSection = () => {
     return (
         <section id="join">
             <div className="container">
-                <div className="px-[67px] py-[71px] bg-[#F2E7DB] rounded-2xl relative">
+                <div className="md:px-[67px] md:py-[71px] py-[45px] px-10 bg-[#F2E7DB] rounded-2xl relative">
                     {/* SHAPES */}
                     <Image src="/assets/images/banner-svg-four.svg" alt="Banner Shapes" className="absolute left-0 top-0" width={60} height={60} />
-                    <Image src="/assets/images/banner-svg-two.svg" alt="Banner Shapes" className="absolute left-[55%] -bottom-6" width={52} height={45} />
+                    <Image src="/assets/images/banner-svg-two.svg" alt="Banner Shapes" className="absolute md:left-[55%] md:-bottom-6 bottom-14 -right-5" width={52} height={45} />
 
-                    <div className="flex items-center justify-between gap-10">
-                        <div className="w-[60%]">
+                    <div className="flex flex-col md:flex-row items-center md:justify-between justify-center gap-10 text-center md:text-start">
+                        <div className="md:w-[60%]">
                             <h2 className="title"><span>Improve</span> your skills, and reach your career as soon as possible</h2>
                         </div>
-                        <div className="flex items-center gap-5">
+                        <div className="flex flex-col md:flex-row items-center gap-5">
                             <Button variant="secondary">Join Now</Button>
                             <Button>Subscribe Course</Button>
                         </div>

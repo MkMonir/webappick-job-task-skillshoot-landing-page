@@ -22,7 +22,7 @@ export default Button;
 
 const Btn = (p: Props) => {
 
-    let style = 'px-6 rounded-md py-3 text-xl font-bold border';
+    let style = 'px-6 rounded-md py-3 sm:text-xl text-[14px] font-bold border';
     switch (p.variant || 'primary') {
         case 'primary':
             style += ` bg-primary border-primary text-white`;
