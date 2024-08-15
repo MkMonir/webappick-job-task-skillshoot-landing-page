@@ -1,3 +1,4 @@
+import About from "./components/About"
 import Clients from "./components/Clients"
 import Courses from "./components/Courses"
 import Features from "./components/Features"
@@ -12,6 +13,7 @@ const HomePageUI = () => {
             <Subscribe />
             <Features />
             <Courses />
+            <About />
         </div>
     )
 }
