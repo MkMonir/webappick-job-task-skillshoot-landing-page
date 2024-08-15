@@ -6,6 +6,7 @@ import Hero from "./components/Hero"
 import JoinSection from "./components/JoinSection"
 import Pricing from "./components/Pricing"
 import Subscribe from "./components/Subscribe"
+import Testimonial from "./components/Testimonial"
 
 const HomePageUI = () => {
     return (
@@ -18,6 +19,7 @@ const HomePageUI = () => {
             <About />
             <JoinSection />
             <Pricing />
+            <Testimonial />
         </div>
     )
 }
