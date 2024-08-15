@@ -3,6 +3,7 @@ import Clients from "./components/Clients"
 import Courses from "./components/Courses"
 import Features from "./components/Features"
 import Hero from "./components/Hero"
+import JoinSection from "./components/JoinSection"
 import Subscribe from "./components/Subscribe"
 
 const HomePageUI = () => {
@@ -14,6 +15,7 @@ const HomePageUI = () => {
             <Features />
             <Courses />
             <About />
+            <JoinSection />
         </div>
     )
 }
