@@ -15,6 +15,9 @@ const config: Config = {
         'light-white': 'rgba(255,255,255,0.6)',
         gray: '#808080',
       },
+      boxShadow: {
+        'custom-shadow': '0px 42px 34px 0px #245D514B',
+      },
     },
   },
   plugins: [],

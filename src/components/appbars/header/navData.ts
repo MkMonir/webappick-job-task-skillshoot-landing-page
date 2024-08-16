@@ -5,7 +5,7 @@ export const navItems = [
   },
   {
     text: 'Course',
-    link: '#course',
+    link: '#courses',
   },
   {
     text: 'Subscribe',

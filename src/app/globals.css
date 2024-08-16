@@ -16,6 +16,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* TESTIMONIAL SLIDE ACTIVE STYLES */
 #testimonial .swiper-slide.swiper-slide-active {
   background-color: #fff;

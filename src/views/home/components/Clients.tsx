@@ -12,8 +12,10 @@ const Clients = () => {
                 {/* TITLE */}
 
                 <div>
+                    {/* CLIENT BRAND LIST */}
                     <ul className="flex justify-center items-center flex-wrap sm:gap-[90px] gap-6">
                         {clientsData?.map((client, i) => (
+                            // CLIENT BRAND ITEM
                             <li key={i}>
                                 <Image src={`/assets/images/${client.name}.png`} alt="Brand Image" width={client.width} height={50} />
                             </li>

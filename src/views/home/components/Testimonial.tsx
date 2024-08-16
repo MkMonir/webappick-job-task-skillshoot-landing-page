@@ -20,7 +20,7 @@ const Testimonial = () => {
                 </div>
                 {/* TITLE */}
 
-                {/* testimonial SLIDER */}
+                {/* TESTIMONIAL SLIDER */}
                 <div className="relative">
                     <Swiper
                         speed={1000}
@@ -50,29 +50,42 @@ const Testimonial = () => {
                         modules={[Autoplay, Keyboard]}
                         className="mySwiper grid grid-cols-3 gap-5"
                     >
-                        {[1, 2, 3, 4, 5, 6].map((testimonial, i) =>
+                        {/* TESTIMONIAL LIST */}
+                        {testimonialData?.map((testimonial, i) =>
                             <SwiperSlide key={i}>
+                                {/* TESTIMONIAL ITEM */}
                                 <div className='grid place-items-center text-center p-12 pb-2.5'>
-                                    <Image src="/assets/images/testimonial-img-one.png" alt="Testimonial Image" width={75} height={75} />
+                                    {/* IMAGE */}
+                                    <Image src={`/assets/images/${testimonial.image}.png`} alt="Testimonial Image" width={75} height={75} />
+
+                                    {/* RATING STARS */}
                                     <ul className='flex items-center gap-2 text-[#FF9100] mt-4 mb-6'>
                                         {[1, 2, 3, 4, 5].map((_, i) => (
                                             <li key={i}><FaStar size={15} /></li>
                                         ))}
                                     </ul>
-                                    <h4 className='text-2xl leading-9 text-[#2C2C2C]'>Jason Bay</h4>
-                                    <p className='description mt-2.5'>I am quite satisfied, because the skills I want or dream of can really be mastered</p>
+
+                                    {/* NAME */}
+                                    <h4 className='text-2xl leading-9 text-[#2C2C2C]'>{testimonial.name}</h4>
+
+                                    {/* RATING TEXT */}
+                                    <p className='description mt-2.5'>{testimonial.description}</p>
                                 </div>
                             </SwiperSlide>
                         )}
                     </Swiper>
 
+                    {/* NAVIGATION ARROWS */}
                     <div className='flex justify-center items-center gap-5 sm:mt-[50px] mt-5'>
+                        {/* LEFT BUTTON */}
                         <button
                             className="z-[200] w-[54px] h-[54px] bg-white grid place-items-center text-2xl text-black rounded-full border-[8px] border-solid border-[#F5F5F5] transition-all duration-500 hover:bg-secondary hover:text-white active:scale-95"
                             onClick={() => testimonialSwiperRef.current?.slidePrev()}
                         >
                             <GoArrowLeft />
                         </button>
+
+                        {/* RIGHT BUTTON */}
                         <button
                             className="z-[200] w-[54px] h-[54px] bg-white grid place-items-center text-2xl text-black rounded-full border-[8px] border-solid border-[#F5F5F5] transition-all duration-500 hover:bg-secondary hover:text-white active:scale-95"
                             onClick={() => testimonialSwiperRef.current?.slideNext()}
@@ -87,3 +100,36 @@ const Testimonial = () => {
 }
 
 export default Testimonial
+
+const testimonialData = [
+    {
+        image: "testimonial-img-one",
+        name: "Jason Bay",
+        description: "I am quite satisfied, because the skills I want or dream of can really be mastered"
+    },
+    {
+        image: "testimonial-img-two",
+        name: "Nany Brugman",
+        description: "I am quite satisfied, because the skills I want or dream of can really be mastered"
+    },
+    {
+        image: "testimonial-img-three",
+        name: "Alexa Nowan",
+        description: "I am quite satisfied, because the skills I want or dream of can really be mastered"
+    },
+    {
+        image: "testimonial-img-one",
+        name: "Jason Bay",
+        description: "I am quite satisfied, because the skills I want or dream of can really be mastered"
+    },
+    {
+        image: "testimonial-img-two",
+        name: "Nany Brugman",
+        description: "I am quite satisfied, because the skills I want or dream of can really be mastered"
+    },
+    {
+        image: "testimonial-img-three",
+        name: "Alexa Nowan",
+        description: "I am quite satisfied, because the skills I want or dream of can really be mastered"
+    }
+]

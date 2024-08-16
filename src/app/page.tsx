@@ -1,4 +1,4 @@
-import HomePageUI from "@/views/homePageUi";
+import HomePageUI from "@/views/home";
 
 export default function Home() {
     return (

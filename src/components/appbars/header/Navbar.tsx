@@ -1,10 +1,19 @@
-'use client';
-
+"use client";
 import Link from 'next/link';
 import { navItems } from './navData';
 import { twMerge } from 'tailwind-merge';
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 
 const Navbar = ({ menuOpen, setMenuOpen }: any) => {
+    const [currentMenu, setCurrentMenu] = useState("")
+
+    const params = useParams();
+
+    useEffect(() => {
+        setCurrentMenu(window.location.hash);
+    }, [params]);
+
     return (
         <nav
             className={twMerge("flex flex-col lg:flex-row items-center lg:gap-10 gap-5 lg:relative absolute lg:top-0 top-full left-0 bottom-0 lg:w-fit w-full lg:h-full h-screen z-10 transition-all duration-500",
@@ -21,8 +30,13 @@ const Navbar = ({ menuOpen, setMenuOpen }: any) => {
                         {/* NAV LINK */}
                         <Link
                             href={`/${item.link}`}
-                            className={`lg:text-light-white text-gray text-lg leading-[35px] py-2 lg:hover:text-white transition-all duration-500`}
-                            onClick={() => setMenuOpen(false)}
+                            className={twMerge("lg:text-light-white text-gray text-lg leading-[35px] py-2 lg:hover:text-white hover:text-primary transition-all duration-500",
+                                currentMenu === item.link && "sm:!text-white text-primary"
+                            )}
+                            onClick={() => {
+                                setMenuOpen(false);
+                                setCurrentMenu(item.link)
+                            }}
                         >
                             {item.text}
                         </Link>

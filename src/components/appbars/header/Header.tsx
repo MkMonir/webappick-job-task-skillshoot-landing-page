@@ -33,8 +33,9 @@ const Header = () => {
                     <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
                     {/* NAVBAR END */}
 
+                    {/* AUTH BUTTONS */}
                     <div className='lg:flex items-center gap-3 hidden'>
-                        <button className='px-2 py-3 text-lg text-white'>Login</button>
+                        <Link href="#" className='px-2 py-3 text-lg text-white'>Login</Link>
                         <Button variant='secondary' path='#' className='!font-normal !px-11 text-lg rounded-lg'>Register</Button>
                     </div>
                 </div>
